@@ -17,10 +17,11 @@
       </tr>
       <% data.each do |data| %>
         <tr>
-          <td><%=data.Name%></td><td><%=data.Address%></td><td><%=data.Type%></td>
+          <td><%=data[:Name]%></td><td><%=data[:Address]%></td><td><%=data[:Type]%></td><td><button id="edit">Edit</button><button id="delete">Delete</button></td>
         </tr>
       <% end %>
     </table>
+    </form>
     <form action="/data" method="post">
       <label for="name">Name</label>
       <input name="name" type="text">
